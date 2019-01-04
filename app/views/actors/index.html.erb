@@ -4,7 +4,7 @@
 
 
           <!--To do: Loop through movies and display each one with this HTML-->
-          <% @actors.eaech do |actor| %>
+          <% @actors.each do |actor| %>
           <div class="actor col-xs-2">
             <%= image_tag actor.image %>
             <h3> <%= actor.first_name%> <%= actor.last_name%></h3>
