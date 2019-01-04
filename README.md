@@ -1,3 +1,3 @@
 # README
 
-Ruby Rails - Many to Many
+Ruby Rails - Model many-to-many relationships
