@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_01_04_010107) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -31,8 +34,8 @@ ActiveRecord::Schema.define(version: 2019_01_04_010107) do
   end
 
   create_table "parts", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "actor_id"
+    t.bigint "movie_id"
+    t.bigint "actor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["actor_id"], name: "index_parts_on_actor_id"
